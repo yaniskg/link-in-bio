@@ -1,1 +1,118 @@
-<h1>This is my homepage</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yanis | Link in Bio</title>
+
+  <!-- Google Fonts I found (name vs. body fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Font "Awesome" (icons for social links) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" defer></script>
+
+  <style>
+    /* Global typography and background stuff */
+    html { min-height: 100%; }
+    body {
+      min-height: 100%;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background: linear-gradient(180deg, #1f005c, #5b0060, #870160, #ac255e, #ca4a69, #f18f73);
+      color: rgba(255, 255, 255, 1.0);
+      font-family: "Raleway", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    /* Layout containers */
+    .main-container { max-width: 640px; margin: auto; }
+    .image-row { margin-bottom: 20px; text-align: center; }
+    .name-row  { 
+      margin-bottom: 30px; 
+      text-align: center; 
+      font-family: "Playfair Display", Georgia, "Times New Roman", serif; 
+      font-size: 24px; 
+      font-weight: 900; 
+    }
+    .social-icons-row { margin-bottom: 30px; display: flex; justify-content: space-around; }
+
+    /* Link list items */
+    .item {
+      background-color: rgba(149, 123, 173, 0.5);
+      border-radius: 1000px;
+      padding: 5px;
+      padding-right: 53px;            /* I counterbalanced the 48px thumbnail */
+      box-shadow: 4px 4px 10px 0px rgba(122, 32, 122, 0.5);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;            /* I vertically centered the text with the thumbnail */
+    }
+
+    /* Images */
+    .avatar-image {
+      width: 128px;
+      height: 128px;
+      object-fit: cover;
+      border-radius: 128px;           /* circular avatar */
+    }
+    .thumbnail {
+      width: 48px;
+      height: 48px;
+      border-radius: 48px;
+      object-fit: cover;
+      margin-right: 12px;
+    }
+
+    /* Links */
+    a { color: rgba(255, 255, 255, 1.0); text-decoration: none; }
+    .link-text { text-align: center; flex-grow: 1; }
+
+    /* Optional debugging aid — provided by instructions (remove comment format to run)
+    * { border: 1px red dashed; }
+    */
+  </style>
+</head>
+<body>
+  <!-- Satisfies the “add this text in the body” step from the instructions -->
+  <p>My link-in-bio</p>
+
+  <div class="main-container">
+    <div class="image-row">
+      <img class="avatar-image" src="/thumbnails/profile-pic.jpg" alt="Yanis Koutoupes Guessous headshot">
+    </div>
+
+    <div class="name-row">Yanis Koutoupes Guessous</div>
+
+    <div class="social-icons-row">
+      <a href="https://github.com/yaniskg" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yaniskg/" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://substack.com/@yaniskg" target="_blank" aria-label="Substack">
+        <i class="fa-solid fa-pen-nib"></i>
+      </a>
+    </div>
+
+    <div class="links-row">
+      <div class="item">
+        <img class="thumbnail" src="/thumbnails/divers.jpg" alt="Divers thumbnail">
+        <a class="link-text" target="_blank" href="https://www.wikipedia.org/">
+          Learn about anything
+        </a>
+      </div>
+
+      <div class="item">
+        <img class="thumbnail" src="/thumbnails/typography.jpg" alt="Typography thumbnail">
+        <a class="link-text" target="_blank" href="https://gemini.google.com/app">
+          Learn even more about anything
+        </a>
+      </div>
+
+      <!-- We can add more .item blocks as needed -->
+    </div> <!-- /.links-row -->
+  </div> <!-- /.main-container -->
+</body>
+</html>
